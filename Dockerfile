@@ -21,7 +21,7 @@ RUN git clone https://github.com/input-output-hk/cardano-node.git
 # /!\ TODO FIND SWEET SPOT FOR BUILD CACHING  
 WORKDIR /tmp/cardano-node
 RUN  git fetch --all --tags && \
- git checkout tags/1.14.0
+ git checkout tags/1.18.1
 
 #RUN cabal install cardano-node cardano-cli  --installdir=/usr/local/bin
 RUN cabal install cardano-node cardano-cli  --installdir=/usr/local/bin --install-method=copy --overwrite-policy=always 
